@@ -81,29 +81,6 @@ Sito vetrina ufficiale di **FormaTrack**, il gestionale gratuito per Windows ded
 
 > L'ordine degli script in fondo a ogni pagina è importante: `i18n-data.js` → `i18n-extra.js` → `i18n.js` → `site.js` (→ `download.js` solo in `download.html`).
 
----
-
-## Avvio in locale
-
-Non serve installare nulla. Basta servire la cartella con un qualsiasi server statico:
-
-```bash
-git clone https://github.com/LoJaeggli09/FormaTrack-WEB.git
-cd FormaTrack-WEB
-python3 -m http.server 8000
-```
-
-Poi aprire [http://localhost:8000](http://localhost:8000).
-
-> Aprire i file direttamente con `file://` funziona in gran parte, ma il download dinamico e alcune funzioni del browser si comportano meglio tramite un server locale.
-
----
-
-## Pubblicazione
-
-1. Caricare l'intero contenuto del repository (mantenendo la struttura delle cartelle) sull'hosting statico.
-2. Se si usa CloudFront, invalidare la cache con il percorso `/*`.
-3. Aggiornare `lastmod` in `sitemap.xml` quando cambiano i contenuti delle pagine.
 
 ---
 
